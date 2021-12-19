@@ -1,3 +1,1 @@
-# myRepositary
-my first repositary
-компоненты
+# Академия ШАГ 
