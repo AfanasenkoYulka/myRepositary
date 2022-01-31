@@ -1,0 +1,1026 @@
+{
+	"info": {
+		"_postman_id": "8606c691-7274-49ab-81ee-ac49561c0736",
+		"name": "Clockifu user auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Homework",
+			"item": [
+				{
+					"name": "Get Workspace",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true,
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true,
+							"host": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-Api-Key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "ZDE3NzlmOWMtYzgwNC00NWI5LWFlYjUtMWM5NDljZGJiNmY3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/workspaces/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"workspaces",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Workspace",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/workspaces/",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"workspaces",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Jan 2022 22:44:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1084"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Expected-Client-Version",
+									"value": "1.0.0"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Auth-Checksum",
+									"value": "ab15bc908afaf9c1453c112c2922fd675464934fea0ee41267d8010af8e23bb4"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"61f4192393fa916b4e92c8b8\",\n        \"name\": \"Afanasenkoyulka's workspace\",\n        \"hourlyRate\": {\n            \"amount\": 0,\n            \"currency\": \"USD\"\n        },\n        \"memberships\": [\n            {\n                \"userId\": \"61f4192393fa916b4e92c8b5\",\n                \"hourlyRate\": null,\n                \"costRate\": null,\n                \"targetId\": \"61f4192393fa916b4e92c8b8\",\n                \"membershipType\": \"WORKSPACE\",\n                \"membershipStatus\": \"ACTIVE\"\n            }\n        ],\n        \"workspaceSettings\": {\n            \"timeRoundingInReports\": false,\n            \"onlyAdminsSeeBillableRates\": true,\n            \"onlyAdminsCreateProject\": true,\n            \"onlyAdminsSeeDashboard\": false,\n            \"defaultBillableProjects\": true,\n            \"lockTimeEntries\": null,\n            \"round\": {\n                \"round\": \"Round to nearest\",\n                \"minutes\": \"15\"\n            },\n            \"projectFavorites\": true,\n            \"canSeeTimeSheet\": false,\n            \"canSeeTracker\": true,\n            \"projectPickerSpecialFilter\": false,\n            \"forceProjects\": false,\n            \"forceTasks\": false,\n            \"forceTags\": false,\n            \"forceDescription\": false,\n            \"onlyAdminsSeeAllTimeEntries\": false,\n            \"onlyAdminsSeePublicProjectsEntries\": false,\n            \"trackTimeDownToSecond\": true,\n            \"projectGroupingLabel\": \"client\",\n            \"adminOnlyPages\": [],\n            \"automaticLock\": null,\n            \"onlyAdminsCreateTag\": false,\n            \"onlyAdminsCreateTask\": false,\n            \"timeTrackingMode\": \"DEFAULT\",\n            \"isProjectPublicByDefault\": true\n        },\n        \"imageUrl\": \"\",\n        \"featureSubscriptionType\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Project",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-Api-Key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "ZDE3NzlmOWMtYzgwNC00NWI5LWFlYjUtMWM5NDljZGJiNmY3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/workspaces/{{workspaceId}}/projects",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"workspaces",
+								"{{workspaceId}}",
+								"projects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Project",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/workspaces/{{workspaceId}}/projects",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"workspaces",
+										"{{workspaceId}}",
+										"projects"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Jan 2022 22:43:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1355"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Expected-Client-Version",
+									"value": "1.0.0"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Auth-Checksum",
+									"value": "ab15bc908afaf9c1453c112c2922fd675464934fea0ee41267d8010af8e23bb4"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"61f858a4ba97e77c50c65ccc\",\n        \"name\": \"homework\",\n        \"hourlyRate\": {\n            \"amount\": 0,\n            \"currency\": \"USD\"\n        },\n        \"clientId\": \"61f85b47bf1bbd124fde3da3\",\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"billable\": true,\n        \"memberships\": [\n            {\n                \"userId\": \"61f4192393fa916b4e92c8b5\",\n                \"hourlyRate\": null,\n                \"costRate\": null,\n                \"targetId\": \"61f858a4ba97e77c50c65ccc\",\n                \"membershipType\": \"PROJECT\",\n                \"membershipStatus\": \"ACTIVE\"\n            }\n        ],\n        \"color\": \"#03A9F4\",\n        \"estimate\": {\n            \"estimate\": \"PT0S\",\n            \"type\": \"AUTO\"\n        },\n        \"archived\": false,\n        \"duration\": \"PT0S\",\n        \"clientName\": \"vadim\",\n        \"note\": \"\",\n        \"costRate\": null,\n        \"timeEstimate\": {\n            \"estimate\": \"PT0S\",\n            \"type\": \"AUTO\",\n            \"resetOption\": null,\n            \"active\": false,\n            \"includeNonBillable\": true\n        },\n        \"budgetEstimate\": null,\n        \"public\": true,\n        \"template\": false\n    },\n    {\n        \"id\": \"61f85c4eba97e77c50c6750a\",\n        \"name\": \"masha\",\n        \"hourlyRate\": {\n            \"amount\": 0,\n            \"currency\": \"USD\"\n        },\n        \"clientId\": \"61f85b5afbebf7179a9ef2e3\",\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"billable\": true,\n        \"memberships\": [\n            {\n                \"userId\": \"61f4192393fa916b4e92c8b5\",\n                \"hourlyRate\": null,\n                \"costRate\": null,\n                \"targetId\": \"61f85c4eba97e77c50c6750a\",\n                \"membershipType\": \"PROJECT\",\n                \"membershipStatus\": \"ACTIVE\"\n            }\n        ],\n        \"color\": \"#03A9F4\",\n        \"estimate\": {\n            \"estimate\": \"PT0S\",\n            \"type\": \"AUTO\"\n        },\n        \"archived\": false,\n        \"duration\": \"PT14S\",\n        \"clientName\": \"masha\",\n        \"note\": \"\",\n        \"costRate\": null,\n        \"timeEstimate\": {\n            \"estimate\": \"PT0S\",\n            \"type\": \"AUTO\",\n            \"resetOption\": null,\n            \"active\": false,\n            \"includeNonBillable\": true\n        },\n        \"budgetEstimate\": null,\n        \"public\": true,\n        \"template\": false\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Client",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-Api-Key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "ZDE3NzlmOWMtYzgwNC00NWI5LWFlYjUtMWM5NDljZGJiNmY3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/workspaces/{{workspaceId}}/clients",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"workspaces",
+								"{{workspaceId}}",
+								"clients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Client",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/workspaces/{{workspaceId}}/clients",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"workspaces",
+										"{{workspaceId}}",
+										"clients"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Jan 2022 22:03:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "365"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Expected-Client-Version",
+									"value": "1.0.0"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Auth-Checksum",
+									"value": "fe8b5ff76e6f17fffdcff56126236311d946dc82576ad386f9467d37b7d89327"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"61f85b5afbebf7179a9ef2e3\",\n        \"name\": \"masha\",\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"archived\": false,\n        \"address\": null\n    },\n    {\n        \"id\": \"61f85b47bf1bbd124fde3da3\",\n        \"name\": \"vadim\",\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"archived\": false,\n        \"address\": null\n    },\n    {\n        \"id\": \"61f85b1dfbebf7179a9ef12f\",\n        \"name\": \"Yulia\",\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"archived\": false,\n        \"address\": \"\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Tag",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-Api-Key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "ZDE3NzlmOWMtYzgwNC00NWI5LWFlYjUtMWM5NDljZGJiNmY3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/workspaces/{{workspaceId}}/tags",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"workspaces",
+								"{{workspaceId}}",
+								"tags"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Tag",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/workspaces/{{workspaceId}}/tags",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"workspaces",
+										"{{workspaceId}}",
+										"tags"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Jan 2022 22:06:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "217"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Expected-Client-Version",
+									"value": "1.0.0"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Auth-Checksum",
+									"value": "fe8b5ff76e6f17fffdcff56126236311d946dc82576ad386f9467d37b7d89327"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"61f85d6dba97e77c50c67b93\",\n        \"name\": \"123123\",\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"archived\": false\n    },\n    {\n        \"id\": \"61f85d63bf1bbd124fde4afc\",\n        \"name\": \"kokoko\",\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"archived\": false\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Task",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-Api-Key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "ZDE3NzlmOWMtYzgwNC00NWI5LWFlYjUtMWM5NDljZGJiNmY3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/workspaces/{{workspaceId}}/projects/{{projectId}}/tasks",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"workspaces",
+								"{{workspaceId}}",
+								"projects",
+								"{{projectId}}",
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Task",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/workspaces/{{workspaceId}}/projects/{{projectId}}/tasks",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"workspaces",
+										"{{workspaceId}}",
+										"projects",
+										"{{projectId}}",
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Jan 2022 22:15:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Expected-Client-Version",
+									"value": "1.0.0"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Auth-Checksum",
+									"value": "fe8b5ff76e6f17fffdcff56126236311d946dc82576ad386f9467d37b7d89327"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"61f85f60fbebf7179a9f0b38\",\n        \"name\": \"zadacha 1\",\n        \"projectId\": \"61f85c4eba97e77c50c6750a\",\n        \"assigneeIds\": [],\n        \"assigneeId\": null,\n        \"userGroupIds\": [],\n        \"estimate\": \"PT0S\",\n        \"status\": \"ACTIVE\",\n        \"duration\": null,\n        \"billable\": true,\n        \"hourlyRate\": null,\n        \"costRate\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get TimeEntry",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-Api-Key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "ZDE3NzlmOWMtYzgwNC00NWI5LWFlYjUtMWM5NDljZGJiNmY3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/workspaces/{{workspaceId}}/user/{{userId}}/time-entries",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"workspaces",
+								"{{workspaceId}}",
+								"user",
+								"{{userId}}",
+								"time-entries"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get TimeEntry",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/workspaces/{{workspaceId}}/user/{{userId}}/time-entries",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"workspaces",
+										"{{workspaceId}}",
+										"user",
+										"{{userId}}",
+										"time-entries"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Jan 2022 22:26:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1776"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Expected-Client-Version",
+									"value": "1.0.0"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Auth-Checksum",
+									"value": "fe8b5ff76e6f17fffdcff56126236311d946dc82576ad386f9467d37b7d89327"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"61f861f493fa916b4eadb15c\",\n        \"description\": \"123456789\",\n        \"tagIds\": null,\n        \"userId\": \"61f4192393fa916b4e92c8b5\",\n        \"billable\": true,\n        \"taskId\": null,\n        \"projectId\": \"61f85c4eba97e77c50c6750a\",\n        \"timeInterval\": {\n            \"start\": \"2022-01-31T22:26:10Z\",\n            \"end\": \"2022-01-31T22:26:14Z\",\n            \"duration\": \"PT4S\"\n        },\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"isLocked\": false,\n        \"customFieldValues\": []\n    },\n    {\n        \"id\": \"61f861f0bf1bbd124fde63ce\",\n        \"description\": \"123456789\",\n        \"tagIds\": null,\n        \"userId\": \"61f4192393fa916b4e92c8b5\",\n        \"billable\": true,\n        \"taskId\": null,\n        \"projectId\": \"61f85c4eba97e77c50c6750a\",\n        \"timeInterval\": {\n            \"start\": \"2022-01-31T22:26:05Z\",\n            \"end\": \"2022-01-31T22:26:10Z\",\n            \"duration\": \"PT5S\"\n        },\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"isLocked\": false,\n        \"customFieldValues\": []\n    },\n    {\n        \"id\": \"61f861edbf1bbd124fde63c3\",\n        \"description\": \"123456789\",\n        \"tagIds\": null,\n        \"userId\": \"61f4192393fa916b4e92c8b5\",\n        \"billable\": true,\n        \"taskId\": null,\n        \"projectId\": \"61f85c4eba97e77c50c6750a\",\n        \"timeInterval\": {\n            \"start\": \"2022-01-31T22:26:03Z\",\n            \"end\": \"2022-01-31T22:26:05Z\",\n            \"duration\": \"PT2S\"\n        },\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"isLocked\": false,\n        \"customFieldValues\": []\n    },\n    {\n        \"id\": \"61f861eafbebf7179a9f19b4\",\n        \"description\": \"123456789\",\n        \"tagIds\": null,\n        \"userId\": \"61f4192393fa916b4e92c8b5\",\n        \"billable\": true,\n        \"taskId\": null,\n        \"projectId\": \"61f85c4eba97e77c50c6750a\",\n        \"timeInterval\": {\n            \"start\": \"2022-01-31T22:26:00Z\",\n            \"end\": \"2022-01-31T22:26:03Z\",\n            \"duration\": \"PT3S\"\n        },\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"isLocked\": false,\n        \"customFieldValues\": []\n    },\n    {\n        \"id\": \"61f861c8fbebf7179a9f190f\",\n        \"description\": \"123456789\",\n        \"tagIds\": null,\n        \"userId\": \"61f4192393fa916b4e92c8b5\",\n        \"billable\": true,\n        \"taskId\": null,\n        \"projectId\": \"61f85c4eba97e77c50c6750a\",\n        \"timeInterval\": {\n            \"start\": \"2022-01-31T22:25:00Z\",\n            \"end\": \"2022-01-31T22:25:00Z\",\n            \"duration\": \"PT0S\"\n        },\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"isLocked\": false,\n        \"customFieldValues\": []\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-Api-Key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "ZDE3NzlmOWMtYzgwNC00NWI5LWFlYjUtMWM5NDljZGJiNmY3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/user",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/user",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Jan 2022 22:42:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1603"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Expected-Client-Version",
+									"value": "1.0.0"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Auth-Checksum",
+									"value": "ab15bc908afaf9c1453c112c2922fd675464934fea0ee41267d8010af8e23bb4"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"61f4192393fa916b4e92c8b5\",\n    \"email\": \"afanasenkoyulka@mail.ru\",\n    \"name\": \"Afanasenkoyulka\",\n    \"memberships\": [\n        {\n            \"userId\": \"61f4192393fa916b4e92c8b5\",\n            \"hourlyRate\": null,\n            \"costRate\": null,\n            \"targetId\": \"61f4192393fa916b4e92c8b8\",\n            \"membershipType\": \"WORKSPACE\",\n            \"membershipStatus\": \"ACTIVE\"\n        },\n        {\n            \"userId\": \"61f4192393fa916b4e92c8b5\",\n            \"hourlyRate\": null,\n            \"costRate\": null,\n            \"targetId\": \"61f858a4ba97e77c50c65ccc\",\n            \"membershipType\": \"PROJECT\",\n            \"membershipStatus\": \"ACTIVE\"\n        },\n        {\n            \"userId\": \"61f4192393fa916b4e92c8b5\",\n            \"hourlyRate\": null,\n            \"costRate\": null,\n            \"targetId\": \"61f85c4eba97e77c50c6750a\",\n            \"membershipType\": \"PROJECT\",\n            \"membershipStatus\": \"ACTIVE\"\n        },\n        {\n            \"userId\": \"61f4192393fa916b4e92c8b5\",\n            \"hourlyRate\": null,\n            \"costRate\": null,\n            \"targetId\": \"61f8635993fa916b4eadb829\",\n            \"membershipType\": \"USERGROUP\",\n            \"membershipStatus\": \"ACTIVE\"\n        }\n    ],\n    \"profilePicture\": \"https://img.clockify.me/no-user-image.png\",\n    \"activeWorkspace\": \"61f4192393fa916b4e92c8b8\",\n    \"defaultWorkspace\": \"61f4192393fa916b4e92c8b8\",\n    \"settings\": {\n        \"weekStart\": \"MONDAY\",\n        \"timeZone\": \"Europe/Minsk\",\n        \"timeFormat\": \"HOUR24\",\n        \"dateFormat\": \"DD/MM/YYYY\",\n        \"sendNewsletter\": false,\n        \"weeklyUpdates\": false,\n        \"longRunning\": false,\n        \"scheduledReports\": false,\n        \"approval\": false,\n        \"pto\": false,\n        \"alerts\": false,\n        \"reminders\": false,\n        \"timeTrackingManual\": false,\n        \"summaryReportSettings\": {\n            \"group\": \"Project\",\n            \"subgroup\": \"Time Entry\"\n        },\n        \"isCompactViewOn\": false,\n        \"dashboardSelection\": \"TEAM\",\n        \"dashboardViewType\": \"PROJECT\",\n        \"dashboardPinToTop\": false,\n        \"projectListCollapse\": 50,\n        \"collapseAllProjectLists\": false,\n        \"groupSimilarEntriesDisabled\": false,\n        \"myStartOfDay\": \"09:00\",\n        \"projectPickerTaskFilter\": false,\n        \"lang\": \"RU\",\n        \"theme\": \"DEFAULT\"\n    },\n    \"status\": \"PENDING_EMAIL_VERIFICATION\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Group",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "X-Api-Key",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "ZDE3NzlmOWMtYzgwNC00NWI5LWFlYjUtMWM5NDljZGJiNmY3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/workspaces/{{workspaceId}}/user-groups",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"workspaces",
+								"{{workspaceId}}",
+								"user-groups"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Group",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base}}/workspaces/{{workspaceId}}/user-groups",
+									"host": [
+										"{{base}}"
+									],
+									"path": [
+										"workspaces",
+										"{{workspaceId}}",
+										"user-groups"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 31 Jan 2022 22:42:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "132"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Expected-Client-Version",
+									"value": "1.0.0"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Auth-Checksum",
+									"value": "ab15bc908afaf9c1453c112c2922fd675464934fea0ee41267d8010af8e23bb4"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1; mode=block"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"61f8635993fa916b4eadb829\",\n        \"name\": \"gruppa1\",\n        \"workspaceId\": \"61f4192393fa916b4e92c8b8\",\n        \"userIds\": [\n            \"61f4192393fa916b4e92c8b5\"\n        ]\n    }\n]"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "value",
+						"value": "ZDE3NzlmOWMtYzgwNC00NWI5LWFlYjUtMWM5NDljZGJiNmY3",
+						"type": "string"
+					},
+					{
+						"key": "key",
+						"value": "X-Api-Key",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "key",
+			"value": "ZDE3NzlmOWMtYzgwNC00NWI5LWFlYjUtMWM5NDljZGJiNmY3"
+		}
+	]
+}
