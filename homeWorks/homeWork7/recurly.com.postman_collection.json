@@ -1,0 +1,713 @@
+{
+	"info": {
+		"_postman_id": "1bee2537-7f3e-413c-8029-57898e23ce84",
+		"name": "recurly.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "create accound",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://afanasenkoyuilka.recurly.com/v2/accounts",
+							"protocol": "https",
+							"host": [
+								"afanasenkoyuilka",
+								"recurly",
+								"com"
+							],
+							"path": [
+								"v2",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create accound 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<account>\r\n  <account_code>1</account_code>\r\n  <email>verena@example.com</email>\r\n  <first_name>Veffrena</first_name>\r\n  <last_name>Example</last_name>\r\n  <username>verena1234</username>\r\n  <cc_emails>bob@example.com,susan@example.com</cc_emails>\r\n  <company_name>Recurly Inc</company_name>\r\n  <address>\r\n    <address1>123 Main St.</address1>\r\n    <city>San Francisco</city>\r\n    <state>CA</state>\r\n    <zip>94105</zip>\r\n    <country>US</country>\r\n  </address>\r\n</account>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://afanasenkoyuilka.recurly.com/v2/accounts",
+							"protocol": "https",
+							"host": [
+								"afanasenkoyuilka",
+								"recurly",
+								"com"
+							],
+							"path": [
+								"v2",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create accound 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<account>\r\n  <account_code>2</account_code>\r\n  <email>verena@example.com</email>\r\n  <first_name>Veffrena</first_name>\r\n  <last_name>Example</last_name>\r\n  <username>verena1234</username>\r\n</account>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://afanasenkoyuilka.recurly.com/v2/accounts",
+							"protocol": "https",
+							"host": [
+								"afanasenkoyuilka",
+								"recurly",
+								"com"
+							],
+							"path": [
+								"v2",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Adjustment",
+			"item": [
+				{
+					"name": "Get account's Adjustment",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://afanasenkoyuilka.recurly.com/v2/accounts/1/adjustments",
+							"protocol": "https",
+							"host": [
+								"afanasenkoyuilka",
+								"recurly",
+								"com"
+							],
+							"path": [
+								"v2",
+								"accounts",
+								"1",
+								"adjustments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "creaty a credit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<adjustment>\r\n  <description>Charge for extra bandwidth</description>\r\n  <unit_amount_in_cents>3000</unit_amount_in_cents>\r\n  <currency>USD</currency>\r\n  <quantity>1</quantity>\r\n  <accounting_code>bandwidth</accounting_code>\r\n  <tax_exempt>false</tax_exempt>\r\n</adjustment>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://afanasenkoyuilka.recurly.com/v2/accounts/1/adjustments",
+							"protocol": "https",
+							"host": [
+								"afanasenkoyuilka",
+								"recurly",
+								"com"
+							],
+							"path": [
+								"v2",
+								"accounts",
+								"1",
+								"adjustments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "creaty a charge",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<adjustment>\r\n  <description>Charge for extra bandwidth</description>\r\n  <unit_amount_in_cents>5000</unit_amount_in_cents>\r\n  <currency>USD</currency>\r\n  <quantity>1</quantity>\r\n </adjustment>",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://afanasenkoyuilka.recurly.com/v2/accounts/1/adjustments",
+							"protocol": "https",
+							"host": [
+								"afanasenkoyuilka",
+								"recurly",
+								"com"
+							],
+							"path": [
+								"v2",
+								"accounts",
+								"1",
+								"adjustments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get account's Adjustment by uuid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://afanasenkoyuilka.recurly.com/v2/adjustments/604915546cf8b6724b511a48bdaad222",
+							"protocol": "https",
+							"host": [
+								"afanasenkoyuilka",
+								"recurly",
+								"com"
+							],
+							"path": [
+								"v2",
+								"adjustments",
+								"604915546cf8b6724b511a48bdaad222"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete adjustment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://afanasenkoyuilka.recurly.com/v2/adjustments/604915546cf8b6724b511a48bdaad222",
+							"protocol": "https",
+							"host": [
+								"afanasenkoyuilka",
+								"recurly",
+								"com"
+							],
+							"path": [
+								"v2",
+								"adjustments",
+								"604915546cf8b6724b511a48bdaad222"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HomeWork7",
+			"item": [
+				{
+					"name": "Plans",
+					"item": [
+						{
+							"name": "READ",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}plans",
+									"host": [
+										"{{baseUrl}}plans"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CREATE",
+							"request": {
+								"auth": {
+									"type": "apikey"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									},
+									{
+										"key": "X-Api-Version",
+										"value": "2.29",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<plan>\r\n  <plan_code>gold</plan_code>\r\n  <name>Gold plan</name>\r\n  <unit_amount_in_cents>\r\n    <USD>6000</USD>    \r\n  </unit_amount_in_cents>\r\n  <setup_fee_in_cents>\r\n    <USD>1000</USD>    \r\n  </setup_fee_in_cents>\r\n  <plan_interval_length>1</plan_interval_length>\r\n  <plan_interval_unit>months</plan_interval_unit>\r\n  <tax_exempt>false</tax_exempt>\r\n  <auto_renew>true</auto_renew>\r\n</plan>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}plans",
+									"host": [
+										"{{baseUrl}}plans"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									},
+									{
+										"key": "X-Api-Version",
+										"value": "2.13",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<plan>\r\n  <setup_fee_in_cents>\r\n    <USD>6000</USD>\r\n  </setup_fee_in_cents>\r\n  <auto_renew>true</auto_renew>\r\n</plan>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}plans/123",
+									"host": [
+										"{{baseUrl}}plans"
+									],
+									"path": [
+										"123"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}plans/123",
+									"host": [
+										"{{baseUrl}}plans"
+									],
+									"path": [
+										"123"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Items",
+					"item": [
+						{
+							"name": "READ",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									},
+									{
+										"key": "X-Api-Version",
+										"value": "2.29",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}items",
+									"host": [
+										"{{baseUrl}}items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CREATE",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									},
+									{
+										"key": "X-Api-Version",
+										"value": "2.29",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<item>\r\n  <item_code>pink_sweaters</item_code>\r\n  <name>Pink Sweaters</name>\r\n  <description>Favorite Pink Sweaters</description>\r\n  <external_sku>PS1234</external_sku>\r\n  <accounting_code>ps0000193</accounting_code>\r\n</item>"
+								},
+								"url": {
+									"raw": "{{baseUrl}}items",
+									"host": [
+										"{{baseUrl}}items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									},
+									{
+										"key": "X-Api-Version",
+										"value": "2.29",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<item>\r\n  <item_code>pink_sweaters</item_code>\r\n  <description>Second-Favorite Pink Sweaters</description>\r\n   <external_sku>PS12hj34</external_sku>\r\n</item>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}items/pink_sweaters",
+									"host": [
+										"{{baseUrl}}items"
+									],
+									"path": [
+										"pink_sweaters"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									},
+									{
+										"key": "X-Api-Version",
+										"value": "2.29",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}items/pink_sweaters",
+									"host": [
+										"{{baseUrl}}items"
+									],
+									"path": [
+										"pink_sweaters"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Coupons",
+					"item": [
+						{
+							"name": "READ",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									},
+									{
+										"key": "X-Api-Version",
+										"value": "2.29",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}coupons",
+									"host": [
+										"{{baseUrl}}coupons"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CREATE",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									},
+									{
+										"key": "X-Api-Version",
+										"value": "2.29",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<coupon>\r\n  <coupon_code>special</coupon_code>\r\n  <name>Special $2 off coupon</name>\r\n  <discount_type>dollars</discount_type>\r\n    <discount_in_cents>\r\n    <USD>200</USD>\r\n  </discount_in_cents>\r\n  <redeem_by_date>2022-12-31</redeem_by_date>\r\n  <duration>temporal</duration>\r\n  <temporal_unit>day</temporal_unit>\r\n  <temporal_amount>28</temporal_amount>\r\n  <max_redemptions>200</max_redemptions>\r\n  <max_redemptions_per_account>1</max_redemptions_per_account>\r\n  <applies_to_all_plans>true</applies_to_all_plans>\r\n</coupon>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}coupons",
+									"host": [
+										"{{baseUrl}}coupons"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									},
+									{
+										"key": "X-Api-Version",
+										"value": "2.29",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<coupon>\r\n  <name>New Coupon Name</name>\r\n  <description>New coupon description for the hosted pages.</description>\r\n  <invoice_description>New coupon description for the invoice.</invoice_description>\r\n  <redeem_by_date>2023-12-31</redeem_by_date>\r\n  <max_redemptions>500</max_redemptions>\r\n  <max_redemptions_per_account>1</max_redemptions_per_account>\r\n</coupon>",
+									"options": {
+										"raw": {
+											"language": "xml"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}coupons/special",
+									"host": [
+										"{{baseUrl}}coupons"
+									],
+									"path": [
+										"special"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic ZTE4MTc2MWNjNzg0NDcwNDg5YmExNzI4OTYzOWU0ZjM6",
+										"type": "text"
+									},
+									{
+										"key": "X-Api-Version",
+										"value": "2.29",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}coupons/special",
+									"host": [
+										"{{baseUrl}}coupons"
+									],
+									"path": [
+										"special"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
