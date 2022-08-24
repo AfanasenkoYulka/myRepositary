@@ -14,19 +14,24 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "doctors")
+@Table(name = "visits")
 /**
- * Модель доктора
+ * Модель посещений
  */
-public class Doctor {
+public class Visit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "doctor_id")
-    // поле id доктора
+    @Column(name = "visit_id")
     private Long id;
-    // поле ФИО доктора
-    private String fio;
-    // поле специальность доктора
-    private String speciality;
+    // поле пациента id
+    @Column(name = "patient_id")
+    private Long patientId;
+    // поле доктора id
+    @Column(name = "doctor_id")
+    private Long doctorId;
+    // поле дата
+    private LocalDate date;
+    //поле результат
+    private String result;
 }

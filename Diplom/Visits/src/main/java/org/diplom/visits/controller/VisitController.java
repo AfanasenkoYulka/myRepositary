@@ -1,8 +1,8 @@
 package org.diplom.visits.controller;
 
 import lombok.AllArgsConstructor;
-import org.diplom.visits.model.Doctor;
-import org.diplom.visits.service.DoctorService;
+import org.diplom.visits.model.Visit;
+import org.diplom.visits.service.VisitService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,50 +10,52 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value = "/doctors", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/visits", produces = MediaType.APPLICATION_JSON_VALUE)
 @AllArgsConstructor
-public class DoctorController {
+public class VisitController {
 
     /**
      * Сервис
      */
-    private DoctorService service;
+    private VisitService service;
 
     /**
-     * Возвращает список всех докторов
+     * Возвращает список всех визитов
      */
     @GetMapping(value = "")
-    public List<Doctor> findAll() {
-        // вывод всех докторов
+    public List<Visit> findAll() {
+        // вывод всех сущностей
         return service.findAll();
     }
 
     /**
-     * Возвращает доктора по ID
+     * Возвращает визит по ID
      */
     @GetMapping(value = "/{id}")
-    public Optional<Doctor> findById(@PathVariable Long id) {
+    public Optional<Visit> findById(@PathVariable Long id) {
         return service.findById(id);
     }
 
     /**
-     * Сохраняет доктора
+     * Сохраняет визит
      */
     @PostMapping(value = "")
-    public Doctor save(@RequestBody Doctor entity) {
+    public Visit save(@RequestBody Visit entity) {
         return service.save(entity);
     }
 
     /**
-     * Обновляет доктора по ID или создает нового
+     * Обновляет визит по ID или создает новый
      */
     @PutMapping(value = "/{id}")
-    public Doctor update(@RequestBody Doctor entity,
-                          @PathVariable Long id) {
+    public Visit update(@RequestBody Visit entity,
+                        @PathVariable Long id) {
         return service.findById(id).map(item -> {
             // обновляем данные
-            item.setFio(entity.getFio());
-            item.setSpeciality(entity.getSpeciality());
+            item.setDoctorId(entity.getDoctorId());
+            item.setPatientId(entity.getPatientId());
+            item.setDate(entity.getDate());
+            item.setResult(entity.getResult());
             // сохраняем изменения
             return service.save(item);
             // если не нашли, сохраняем как новую
@@ -61,7 +63,7 @@ public class DoctorController {
     }
 
     /**
-     * Удаляет доктора по ID
+     * Удаляет визит по ID
      */
     @DeleteMapping(value = "/{id}")
     public void deleteById(@PathVariable Long id) {
